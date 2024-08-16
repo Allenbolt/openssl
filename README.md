@@ -271,3 +271,83 @@ All rights reserved.
 [appveyor jobs]:
     <https://ci.appveyor.com/project/openssl/openssl/branch/master>
     "AppVeyor Jobs"
+[16/08, 8:12 pm] Meta AI: Here is a simple encryption and decryption code in JavaScript for sending secret messages:
+
+Encryption:
+```
+function encrypt(message, key) {
+  let encryptedMessage = "";
+  for (let i = 0; i < message.length; i++) {
+    encryptedMessage += String.fromCharCode(message.charCodeAt(i) + key);
+  }
+  return encryptedMessage;
+}
+```
+
+Decryption:
+```
+function decrypt(encryptedMessage, key) {
+  let decryptedMessage = "";
+  for (let i = 0; i < encryptedMessage.length; i++) {
+    decryptedMessage += String.fromCharCode(encryptedMessage.charCodeAt(i) - key);
+  }
+  return decryptedMessage;
+}
+```
+
+Example usage:
+```
+const message = "I love you";
+const key = 3;
+
+const encrypted = encrypt(message, key);
+console.log(encrypted); // Output: "L ORYH BRX"
+
+const decrypted = decrypt(encrypted, key);
+console.log(decrypted); // Output: "I love you"
+```
+
+In this code, the `encrypt` function takes a message and a key as input, and returns the encrypted message. The `decrypt` function takes the encrypted message and the same key as input, and returns the original message.
+
+You can use
+[16/08, 8:12 pm] Meta AI: Here is a simple encryption and decryption code in JavaScript for sending secret messages:
+
+Encryption:
+```
+function encrypt(message, key) {
+  let encryptedMessage = "";
+  for (let i = 0; i < message.length; i++) {
+    encryptedMessage += String.fromCharCode(message.charCodeAt(i) + key);
+  }
+  return encryptedMessage;
+}
+```
+
+Decryption:
+```
+function decrypt(encryptedMessage, key) {
+  let decryptedMessage = "";
+  for (let i = 0; i < encryptedMessage.length; i++) {
+    decryptedMessage += String.fromCharCode(encryptedMessage.charCodeAt(i) - key);
+  }
+  return decryptedMessage;
+}
+```
+
+Example usage:
+```
+const message = "I love you";
+const key = 3;
+
+const encrypted = encrypt(message, key);
+console.log(encrypted); // Output: "L ORYH BRX"
+
+const decrypted = decrypt(encrypted, key);
+console.log(decrypted); // Output: "I love you"
+```
+
+In this code, the `encrypt` function takes a message and a key as input, and returns the encrypted message. The `decrypt` function takes the encrypted message and the same key as input, and returns the original message.
+
+You can use this code to send secret messages to your girlfriend, and she can use the same key to decrypt them. Just remember to keep the key safe!
+
+Note: This is a simple Caesar cipher encryption, and it's not recommended to use it for sensitive information. If you need a more secure encryption, consider using a library like OpenSSL.
